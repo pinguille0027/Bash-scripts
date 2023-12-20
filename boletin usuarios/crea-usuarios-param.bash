@@ -1,5 +1,5 @@
 #!/bin/bash
-if ! ls /home | grep "$1" >/dev/null; then
+if ! cat /etc/passwd | grep "$1" >/dev/null; then
     useradd "$1" -s /bin/bash
     echo "$2" >./pwdus
     echo "$2" >>./pwdus

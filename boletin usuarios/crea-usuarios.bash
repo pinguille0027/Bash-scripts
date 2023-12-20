@@ -3,7 +3,7 @@ echo "introduzca nome de usuario"
 read NOME
 echo "introduzca contrasinal"
 read PWD
-if ! ls /home | grep "$NOME" > /dev/null; then
+if ! cat /etc/passwd | grep "$NOME" > /dev/null; then
     useradd "$NOME" -s /bin/bash
     echo "$PWD" >./pwdus
     echo "$PWD" >>./pwdus

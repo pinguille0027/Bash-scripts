@@ -1,0 +1,9 @@
+a21pablorc:Pablo Rodriguez Collazo:abc123.:/bin/zsh
+a21pablokt:Pablo Kira Tojeiro:321abc.:/bin/sh
+a21rubenmm:Ruben Martinez Martinez:331eeeA.:/bin/bash
+a21anxolr:Anxo Lopez Rio:ttttA123.:/bin/zsh
+a21nuriats:Nuria Terneiro Salgado:222a1L2.:/bin/bash
+a21josempp:Jose Maria Porro Perez:4441wwL.:/bin/zsh
+a21angel:Angel:441aaE.:/bin/sh
+a21guillermosg:Guillermo Salgado Gomez:3311aaE.:/bin/bash
+a21roidd:Roi Dominguez Diaz:FFcc33.:/bin/zsh
