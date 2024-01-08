@@ -4,14 +4,11 @@ read NOME
 echo "introduzca contrasinal"
 read PWD
 if ! cat /etc/passwd | grep "$NOME" > /dev/null; then
-    useradd "$NOME" -s /bin/bash
-    echo "$PWD" >./pwdus
-    echo "$PWD" >>./pwdus
-    rm ./pwdus
-    passwd "$NOME" <./pwdus
+    useradd -m "$NOME" -s /bin/bash
+    echo -e "$PWD\n$PWD" | passwd "$NOME"
     cp -r ./copia-home /home/"$NOME"/
     for i in /home/"$NOME"/*; do
-        chown "$NOME" "$i"
+        chown "$NOME":"$NOME" "$i"
     done
     else
     echo "ese usuario xa existe"

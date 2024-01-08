@@ -8,17 +8,14 @@ for USER in $( cat ${LISTADO});
 do
 echo "$USER"
 NAME=$(echo "$USER" | cut -f 1 -d :)
-echo $NAME
+echo "$NAME"
 ALIAS=$(echo "$USER" | cut -f 2 -d :)
-echo $ALIAS
+echo "$ALIAS"
 PWD=$(echo "$USER" | cut -f 3 -d :)
 SHELL=$(echo "$SHELL" | cut -f 4 -d :)
 if ! cat /etc/passwd | grep "$NAME" >/dev/null; then
-    useradd "$NAME" -c "$ALIAS" -s "$SHELL"
-    echo "$PWD" >./pwdus
-    echo "$PWD" >>./pwdus
-    passwd "$NAME" <./pwdus
-    rm ./pwdus
+    useradd -m "$NAME" -c "$ALIAS" -s "$SHELL"
+    echo -e "$PWD\n$PWD" | passwd "$NAME"
     else
     echo "ese usuario xa existe"
     userdel -rf "$NAME"
