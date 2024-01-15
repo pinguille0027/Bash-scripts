@@ -3,4 +3,4 @@ SI
 PROG
 LM
 0_comun
-0_comun privado
+0_comun_privado
