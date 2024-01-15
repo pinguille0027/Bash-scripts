@@ -19,7 +19,7 @@ if [ -f variables.bash ]; then
         else
             echo "para que o script funcione debe existir o directorio de recursos
         -Para montalo automáticamente pode chamar a mount.bash
-        -O directorio de recursos por defecto se monta en /mnt/DATOSXILGARO/recursos, pode cambiarse editando variables.bash"
+        -O directorio de recursos por defecto se monta en ${ROOTMOD}, pode cambiarse editando variables.bash"
         fi
     else
         echo "non se atopa o listado de grupos no directorio actual, pode redefinir o nome ou ruta en variables.bash"
